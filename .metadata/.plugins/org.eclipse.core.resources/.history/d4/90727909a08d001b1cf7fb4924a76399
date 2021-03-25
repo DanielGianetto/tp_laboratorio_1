@@ -41,11 +41,8 @@ int main(void)
 				scanf("%f",&numA);
 				break;
 			case 2:
-				printf("Ingrese el operando B: ");
-				scanf("%f",&numB);
 				break;
 			case 3:
-
 				break;
 			case 4:
 				break;

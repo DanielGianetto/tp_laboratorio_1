@@ -1,0 +1,38 @@
+/*
+ ============================================================================
+ Name        : TP1.c
+ Author      : Daniel Gianetto
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "utn_ope.h"
+
+int main(void)
+{
+	float numA;
+	float numB;
+	float resultado;
+	int opcion;
+
+	do
+	{
+		printf("1-Ingresar el operando A.\n2-Ingresar el operando B.\n3-Calcular todas las operaciones.\n4-Informar resultados.\n5-Salir.\n");
+
+
+		switch(opcion)
+		{
+
+		}
+
+	}while();
+
+
+
+
+	return EXIT_SUCCESS;
+}
