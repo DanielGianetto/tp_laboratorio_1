@@ -1,0 +1,114 @@
+/*
+ ============================================================================
+ Name        : Clase.c
+ Author      : Daniel Gianetto
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float sumar(float a, float b, float* pResultado);
+float restar(float a, float b, float* pResultado);
+float multiplicar(float a, float b, float* pResultado);
+float dividir(float a, float b, float* pResultado);
+
+int main(void)
+{
+	float a;
+	float b;
+	float resultado;
+	float respuesta;
+
+	char opcion;
+
+	do
+	{
+		printf("\nIngrese el valor A: ");
+		scanf("%f",&a);
+		printf("Ingrese el valor B: ");
+		scanf("%f",&b);
+
+		printf("\n¿Que operacion desea realizar?: \nSumar(+).\nRestar(-)\nMultiplicar(*)\nDividir(/)\nSalir(x)\n");
+		scanf("%s",&opcion);
+
+		while(opcion != '+' && opcion != '-' && opcion != '*' && opcion != '/')
+		{
+			printf("\nOpcion invalida, intente de nuevo...");
+			scanf("%s",&opcion);
+		}
+
+		switch(opcion)
+		{
+			case '+':
+				respuesta = sumar(a,b,&resultado);
+				break;
+			case '-':
+				respuesta = restar(a,b,&resultado);
+				break;
+			case '*':
+				respuesta = multiplicar(a,b,&resultado);
+				break;
+			case '/':
+				respuesta = dividir(a,b,&resultado);
+				break;
+		}
+
+		if(respuesta == -1)
+		{
+			printf("\nError\n");
+		}
+		else
+		{
+			printf("\nEl resultado es: %.2f.\n",resultado);
+		}
+
+	}while(opcion != 'x');
+
+	return 0;
+}
+
+float sumar(float a, float b, float* pResultado)
+{
+	*pResultado = a+b;
+
+	return 0;
+}
+
+float restar(float a, float b, float* pResultado)
+{
+	*pResultado = a-b;
+
+	return 0;
+}
+
+float multiplicar(float a, float b, float* pResultado)
+{
+	*pResultado = a*b;
+
+	return 0;
+}
+
+float dividir(float a, float b, float* pResultado)
+{
+	if(b==0)
+	{
+		return -1;
+	}
+	else
+	{
+		*pResultado = a/b;
+		return 0;
+	}
+
+	/*if(b==0)
+	{
+		return -1;
+	}
+
+	*pResultado = a/b;
+	return 0;*/
+}
