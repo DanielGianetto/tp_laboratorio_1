@@ -83,6 +83,6 @@ void resolverMostrarTodo(float x, float y, int flag)
 	}
 	else
 	{
-		printf("\nTodo calculado!\n");
+		printf("\nTodo calculado!");
 	}
 }

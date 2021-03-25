@@ -16,6 +16,7 @@ int main(void)
 {
 	float numA;
 	float numB;
+	float resultado;
 	int opcion;
 	int mostrar;
 
@@ -53,7 +54,7 @@ int main(void)
 			case 4:
 				if(mostrar == 0)
 				{
-					printf("\nResuelva las operaciones para poder ver los resultados.");
+					printf("\nResuelva las operaciones para poder ver los resultadors.");
 				}
 				else
 				{
@@ -65,6 +66,9 @@ int main(void)
 		}
 
 	}while(opcion != 5);
+
+
+
 
 	return EXIT_SUCCESS;
 }

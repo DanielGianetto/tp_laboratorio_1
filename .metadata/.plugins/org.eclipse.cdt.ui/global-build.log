@@ -1,5 +1,20 @@
-14:29:22 **** Incremental Build of configuration Debug for project TP1 ****
+17:29:18 **** Incremental Build of configuration Debug for project TP1 ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/utn_ope.o ../src/utn_ope.c 
+../src/utn_ope.c: In function ‘resolverMostrarTodo’:
+../src/utn_ope.c:77:3: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   77 |   printf("\nEl resultado de A+B es: %.2f."
+      |   ^~~~~~
+../src/utn_ope.c:77:3: warning: incompatible implicit declaration of built-in function ‘printf’
+../src/utn_ope.c:9:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    8 | #include "utn_ope.h"
+  +++ |+#include <stdio.h>
+    9 | 
+../src/utn_ope.c:86:3: warning: incompatible implicit declaration of built-in function ‘printf’
+   86 |   printf("\nTodo calculado!\n");
+      |   ^~~~~~
+../src/utn_ope.c:86:3: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/TP1.o ../src/TP1.c 
 gcc -o TP1 src/TP1.o src/utn_lib.o src/utn_ope.o 
+Info: Nothing to build for TP1
 Info: Nothing to build for TP1

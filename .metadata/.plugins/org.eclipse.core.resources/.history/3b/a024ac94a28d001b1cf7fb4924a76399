@@ -14,8 +14,6 @@ float multiplicacion(float x, float y, float* pResultado);
 float division(float x, float y, float* pResultado);
 long long factorial(float x, float* pResultado);
 
-void resolverMostrarTodo(float x, float y, int flag);
-
 
 
 #endif /* UTN_OPE_H_ */

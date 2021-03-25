@@ -56,7 +56,7 @@ long long factorial(float x, float* pResultado)
 	return 0;
 }
 
-void resolverMostrarTodo(float x, float y, int flag)
+void resolverMostrarTodo(float x, float y)
 {
 	float sumar;
 	float restar;
@@ -72,17 +72,10 @@ void resolverMostrarTodo(float x, float y, int flag)
 	factorial(x,&calcularFactX);
 	factorial(y,&calcularFactY);
 
-	if(flag == 1)
-	{
-		printf("\nEl resultado de A+B es: %.2f."
-				"\nEl resultado de A-B es: %.2f."
-				"\nEl resultado de A*B es: %.2f."
-				"\nEl resultado de A/B es: %.2f."
-				"\nEl factorial de A es: %.2f."
-				"\nEl factorial de B es: %.2f.",sumar,restar,multiplicar,dividir,calcularFactX,calcularFactY);
-	}
-	else
-	{
-		printf("\nTodo calculado!\n");
-	}
+	printf("\nEl resultado de A+B es: %.2f."
+			"\nEl resultado de A-B es: %.2f."
+			"\nEl resultado de A*B es: %.2f."
+			"\nEl resultado de A/B es: %.2f."
+			"\nEl factorial de A es: %.2f."
+			"\nEl factorial de B es: %.2f.",sumar,restar,multiplicar,dividir,calcularFactX,calcularFactY);
 }

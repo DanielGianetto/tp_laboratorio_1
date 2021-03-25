@@ -16,10 +16,8 @@ int main(void)
 {
 	float numA;
 	float numB;
+	float resultado;
 	int opcion;
-	int mostrar;
-
-	mostrar = 0;
 
 	do
 	{
@@ -47,24 +45,16 @@ int main(void)
 				scanf("%f",&numB);
 				break;
 			case 3:
-				resolverMostrarTodo(numA,numB,mostrar);
-				mostrar = 1;
+				resolverTodo(numA,numB);
 				break;
 			case 4:
-				if(mostrar == 0)
-				{
-					printf("\nResuelva las operaciones para poder ver los resultados.");
-				}
-				else
-				{
-					resolverMostrarTodo(numA,numB,mostrar);
-					mostrar = 0;
-				}
-
 				break;
 		}
 
 	}while(opcion != 5);
+
+
+
 
 	return EXIT_SUCCESS;
 }

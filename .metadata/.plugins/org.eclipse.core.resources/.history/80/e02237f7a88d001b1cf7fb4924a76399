@@ -16,6 +16,7 @@ int main(void)
 {
 	float numA;
 	float numB;
+	//float resultado;
 	int opcion;
 	int mostrar;
 
