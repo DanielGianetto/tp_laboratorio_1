@@ -1,0 +1,16 @@
+/*
+ * utn.h
+ *
+ *  Created on: Mar 25, 2021
+ *      Author: daniel
+ */
+
+#ifndef UTN_LIB_H_
+#define UTN_LIB_H_
+
+float utn_getFloat();
+void utn_menu();
+
+
+
+#endif /* UTN_LIB_H_ */

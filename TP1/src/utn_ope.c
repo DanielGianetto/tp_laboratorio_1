@@ -2,40 +2,40 @@
  * utn_ope.c
  *
  *  Created on: Mar 25, 2021
- *      Author: daniel
+ *      Author: Daniel Gianetto
  */
 
 #include "utn_ope.h"
 
-float suma(float x, float y, float* pResultado)
+float utn_suma(float x, float y, float* pResultado)
 {
 	*pResultado = x+y;
 
 	return 0;
 }
 
-float resta(float x, float y, float* pResultado)
+float utn_resta(float x, float y, float* pResultado)
 {
 	*pResultado = x-y;
 
 	return 0;
 }
 
-float multiplicacion(float x, float y, float* pResultado)
+float utn_multiplicacion(float x, float y, float* pResultado)
 {
 	*pResultado = x*y;
 
 	return 0;
 }
 
-float division(float x, float y, float* pResultado)
+float utn_division(float x, float y, float* pResultado)
 {
 	*pResultado = x/y;
 
 	return 0;
 }
 
-long long factorial(float x, float* pResultado)
+long long utn_factorial(float x, float* pResultado)
 {
 	int i;
 
@@ -56,7 +56,7 @@ long long factorial(float x, float* pResultado)
 	return 0;
 }
 
-void resolverMostrarTodo(float x, float y, int flag)
+void utn_resolverMostrarTodo(float x, float y, int mostrarResultados, int flagA, int flagB)
 {
 	float sumar;
 	float restar;
@@ -65,24 +65,70 @@ void resolverMostrarTodo(float x, float y, int flag)
 	float calcularFactX;
 	float calcularFactY;
 
-	suma(x,y,&sumar);
-	resta(x,y,&restar);
-	multiplicacion(x,y,&multiplicar);
-	division(x,y,&dividir);
-	factorial(x,&calcularFactX);
-	factorial(y,&calcularFactY);
+	int parteEntera;
 
-	if(flag == 1)
+	utn_suma(x,y,&sumar);
+	utn_resta(x,y,&restar);
+	utn_multiplicacion(x,y,&multiplicar);
+	utn_division(x,y,&dividir);
+	utn_factorial(x,&calcularFactX);
+	utn_factorial(y,&calcularFactY);
+
+	if(mostrarResultados != 0)
 	{
-		printf("\nEl resultado de A+B es: %.2f."
-				"\nEl resultado de A-B es: %.2f."
-				"\nEl resultado de A*B es: %.2f."
-				"\nEl resultado de A/B es: %.2f."
-				"\nEl factorial de A es: %.2f."
-				"\nEl factorial de B es: %.2f.",sumar,restar,multiplicar,dividir,calcularFactX,calcularFactY);
+		printf("\t\t----Resultados----\n\ta)El resultado de A+B es: %.2f."
+				"\n\tb)El resultado de A-B es: %.2f."
+				"\n\tc)El resultado de A*B es: %.2f.", sumar, restar, multiplicar);
+
+		if(y == 0)
+		{
+			printf("\n\td)No se puede dividir por 0!.");
+		}
+		else
+		{
+			printf("\n\td)El resultado de A/B es: %.2f.", dividir);
+		}
+
+		if(x < 0)
+		{
+			printf("\n\te)El factorial de A es: No se puede calcular el factorial de un numero negativo.");
+		}
+		else
+		{
+			parteEntera = x;
+			if(x - parteEntera)
+			{
+				printf("\n\te)El factorial de A es: No se puede calcular el factorial de un numero decimal.");
+			}
+			else
+			{
+				printf("\n\te)El factorial de A es: %.0f", calcularFactX);
+			}
+		}
+
+		if(y < 0)
+		{
+			printf("\n\t  El factorial de B es: No se puede calcular el factorial de un numero negativo.\n");
+		}
+		else
+		{
+			parteEntera = y;
+			if(y - parteEntera)
+			{
+				printf("\n\t  El factorial de B es: No se puede calcular el factorial de un numero decimal.\n");
+			}
+			else
+			{
+				printf("\n\t  El factorial de B es: %.0f\n", calcularFactY);
+			}
+		}
+
+		//system("pause");
+		//system("cls");
+
 	}
 	else
 	{
-		printf("\nTodo calculado!\n");
+		printf("\n\t\tTodo calculado!.");
 	}
 }

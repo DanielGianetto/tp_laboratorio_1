@@ -1,69 +1,67 @@
-/*
- ============================================================================
- Name        : TP1.c
- Author      : Daniel Gianetto
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
+/*****************************************************************
+* Programa: TP1 Laboratorio 1-
+*
+* Objetivo:
+    Ingresar 2 numeros A y B, calcular todas las operaciones e
+    informar los resultados seleccionando la opción correspondiente
+    desde el menu.
+        numA
+        numB
+        opcion
+*
+*   Version: 0.5 del 28 de Marzo del 2021.
+*   Autor: Daniel Gianetto
+*****************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include "utn_ope.h"
+#include "utn_lib.h"
 
 int main(void)
 {
 	float numA;
 	float numB;
 	int opcion;
+	int changeA;
+	int changeB;
 	int mostrar;
 
 	mostrar = 0;
+	changeA = 0;
+	changeB = 0;
 
 	do
 	{
-		printf("1-Ingresar el operando A."
-				"\n2-Ingresar el operando B."
-				"\n3-Calcular todas las operaciones."
-				"\n4-Informar resultados."
-				"\n5-Salir.\n");
-		scanf("%d",&opcion);
-
-		while(opcion <= 0 || opcion > 5)
-		{
-			printf("Opcion invalida, intente de nuevo: ");
-			scanf("%d",&opcion);
-		}
+		utn_menu(&opcion, numA, numB, changeA, changeB, 1,5);
 
 		switch(opcion)
 		{
 			case 1:
-				printf("Ingrese el operando A: ");
-				scanf("%f",&numA);
+				numA = utn_getFloat(&numA, "\nIngrese el 1er operando: ");
+				changeA = 1;
 				break;
 			case 2:
-				printf("Ingrese el operando B: ");
-				scanf("%f",&numB);
+				numB = utn_getFloat(&numB, "\nIngrese el 2do operando: ");
+				changeB = 1;
 				break;
 			case 3:
-				resolverMostrarTodo(numA,numB,mostrar);
+				utn_resolverMostrarTodo(numA,numB,mostrar,changeA,changeB);
 				mostrar = 1;
 				break;
 			case 4:
 				if(mostrar == 0)
 				{
-					printf("\nResuelva las operaciones para poder ver los resultados.");
+					printf("\nResuelva las operaciones para poder ver los resultados!");
 				}
 				else
 				{
-					resolverMostrarTodo(numA,numB,mostrar);
+					utn_resolverMostrarTodo(numA,numB,mostrar,changeA,changeB);
 					mostrar = 0;
+					changeA = 0;
+					changeB = 0;
 				}
-
 				break;
 		}
-
 	}while(opcion != 5);
 
 	return EXIT_SUCCESS;

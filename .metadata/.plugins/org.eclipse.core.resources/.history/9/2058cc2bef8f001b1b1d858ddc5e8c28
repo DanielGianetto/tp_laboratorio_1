@@ -1,0 +1,69 @@
+/*****************************************************************
+* Programa: TP1 Laboratorio 1-
+*
+* Objetivo:
+    Ingresar 2 numeros A y B, calcular todas las operaciones e
+    informar los resultados seleccionando la opción correspondiente
+    desde el menu.
+        numA
+        numB
+        opcion
+*
+*   Version: 0.5 del 28 de Marzo del 2021.
+*   Autor: Daniel Gianetto
+*****************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include "utn_ope.h"
+
+int main(void)
+{
+	float numA;
+	float numB;
+	int opcion;
+	int changeA;
+	int changeB;
+	int mostrar;
+	int reintentos;
+
+	mostrar = 0;
+	changeA = 0;
+	changeB = 0;
+	reintentos = 3
+
+	do
+	{
+		utn_menu(&opcion, &numA, &numB, changeA, changeB, 1,5,reintentos);
+
+		switch(opcion)
+		{
+			case 1:
+				numA = utn_getFloat(&numA, "\nIngrese el 1er operando: ");
+				changeA = 1;
+				break;
+			case 2:
+				numB = utn_getFloat(&numB, "\nIngrese el 2do operando: ");
+				changeB = 1;
+				break;
+			case 3:
+				utn_resolverMostrarTodo(numA,numB,mostrar);
+				mostrar = 1;
+				break;
+			case 4:
+				if(mostrar == 0)
+				{
+					printf("\nResuelva las operaciones para poder ver los resultados!");
+				}
+				else
+				{
+					utn_resolverMostrarTodo(numA,numB,mostrar);
+					mostrar = 0;
+					changeA = 0;
+					changeB = 0;
+				}
+				break;
+		}
+	}while(opcion != 5 || reintentos == 0);
+
+	return EXIT_SUCCESS;
+}
