@@ -4,8 +4,6 @@
  *  Created on: Mar 25, 2021
  *      Author: Daniel Gianetto
  */
-#include <stdio.h>
-#include <stdlib.h>
 #include "utn_ope.h"
 
 float utn_suma(float x, float y, float* pResultado)
@@ -158,7 +156,7 @@ void utn_resolverMostrarTodo(float x, float y, int mostrarResultados)
 				printf("\n\t  El factorial de B es: %.0f\n", calcularFactY);
 			}
 		}
-		system("clear");//system("cls");
+		system("clear");
 	}
 	else
 	{

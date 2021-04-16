@@ -8,6 +8,10 @@
 #ifndef UTN_LIB_H_
 #define UTN_LIB_H_
 
+#include <stdio.h>
+#include <stdio_ext.h>
+#include <stdlib.h>
+
 /** \brief Permite el ingreso de un dato de tipo float.
  *
  *	\param pNumero float puntero del dato de tipo float a ingresar.

@@ -4,9 +4,7 @@
  *  Created on: Mar 25, 2021
  *      Author: Daniel Gianetto
  */
-#include <stdio.h>
-#include <stdio_ext.h>
-#include <stdlib.h>
+
 #include "utn_lib.h"
 
 float utn_getFloat(float* pNum, char* pTexto)
@@ -22,7 +20,7 @@ float utn_getFloat(float* pNum, char* pTexto)
 		retorno = 0;
 	}
 
-	system("clear");//system("cls");
+	system("clear");
 
 	return retorno;
 }
@@ -49,7 +47,7 @@ int utn_getInt(int* pNum, char* pTexto, char* pError, int minimo, int maximo)
 			{
 				printf("%s",pError);
 			}
-			system("clear");//system("cls");
+			system("clear");
 		}while(retorno == -1);
 	}
 
@@ -86,8 +84,6 @@ int utn_menu(int* pVariableOpcion, float numA, float numB, int changeA, int chan
 		printf("\n\t3)Calcular todas las operaciones.\n\t4)Informar resultados.\n\t5)Salir.");
 
 		utn_getInt(pVariableOpcion, "\t\nSeleccione una opcion: ","\t\nOpcion invalida, intente de nuevo: ",minimo,maximo);
-		system("clear");//system("cls");
-
 		retorno = 0;
 	}
 

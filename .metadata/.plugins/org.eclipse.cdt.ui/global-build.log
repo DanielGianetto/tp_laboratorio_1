@@ -1,10 +1,5 @@
-19:33:36 **** Incremental Build of configuration Debug for project TP1 ****
+19:50:09 **** Incremental Build of configuration Debug for project TP1 ****
 make all 
-Building file: ../src/TP1.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP1.d" -MT"src/TP1.o" -o "src/TP1.o" "../src/TP1.c"
-Finished building: ../src/TP1.c
- 
 Building file: ../src/utn_ope.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_ope.d" -MT"src/utn_ope.o" -o "src/utn_ope.o" "../src/utn_ope.c"
@@ -15,23 +10,6 @@ Invoking: GCC C Linker
 gcc  -o "TP1" ./src/TP1.o ./src/utn_lib.o ./src/utn_ope.o   
 Finished building target: TP1
  
-19:33:39 **** Incremental Build of configuration Debug for project TP1 ****
+19:50:10 **** Incremental Build of configuration Debug for project TP1 ****
 make all 
 make: Nothing to be done for 'all'.
-19:35:44 **** Incremental Build of configuration Debug for project TP1 ****
-make all 
-Building file: ../src/TP1.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP1.d" -MT"src/TP1.o" -o "src/TP1.o" "../src/TP1.c"
-Finished building: ../src/TP1.c
- 
-Building file: ../src/utn_ope.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn_ope.d" -MT"src/utn_ope.o" -o "src/utn_ope.o" "../src/utn_ope.c"
-Finished building: ../src/utn_ope.c
- 
-Building target: TP1
-Invoking: GCC C Linker
-gcc  -o "TP1" ./src/TP1.o ./src/utn_lib.o ./src/utn_ope.o   
-Finished building target: TP1
- 

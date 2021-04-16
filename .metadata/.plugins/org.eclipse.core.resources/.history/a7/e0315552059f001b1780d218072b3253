@@ -4,8 +4,7 @@
  *  Created on: Mar 25, 2021
  *      Author: Daniel Gianetto
  */
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "utn_ope.h"
 
 float utn_suma(float x, float y, float* pResultado)
@@ -127,14 +126,14 @@ void utn_resolverMostrarTodo(float x, float y, int mostrarResultados)
 
 		if(x < 0)
 		{
-			printf("\n\te)No se puede calcular el factorial de un numero negativo.");
+			printf("\n\te)El factorial de A es: No se puede calcular el factorial de un numero negativo.");
 		}
 		else
 		{
 			parteEntera = x;
 			if(x - parteEntera)
 			{
-				printf("\n\te)No se puede calcular el factorial de un numero decimal.");
+				printf("\n\te)El factorial de A es: No se puede calcular el factorial de un numero decimal.");
 			}
 			else
 			{
@@ -144,21 +143,24 @@ void utn_resolverMostrarTodo(float x, float y, int mostrarResultados)
 
 		if(y < 0)
 		{
-			printf("\n\t  No se puede calcular el factorial de un numero negativo.\n");
+			printf("\n\t  El factorial de B es: No se puede calcular el factorial de un numero negativo.\n");
 		}
 		else
 		{
 			parteEntera = y;
 			if(y - parteEntera)
 			{
-				printf("\n\t  No se puede calcular el factorial de un numero decimal.\n");
+				printf("\n\t  El factorial de B es: No se puede calcular el factorial de un numero decimal.\n");
 			}
 			else
 			{
 				printf("\n\t  El factorial de B es: %.0f\n", calcularFactY);
 			}
 		}
-		system("clear");//system("cls");
+
+		//system("pause");
+		//system("cls");
+
 	}
 	else
 	{

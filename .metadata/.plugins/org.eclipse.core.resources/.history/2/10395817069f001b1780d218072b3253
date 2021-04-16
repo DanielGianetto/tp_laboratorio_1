@@ -158,7 +158,8 @@ void utn_resolverMostrarTodo(float x, float y, int mostrarResultados)
 				printf("\n\t  El factorial de B es: %.0f\n", calcularFactY);
 			}
 		}
-		system("clear");//system("cls");
+		getch();
+		system("clear");
 	}
 	else
 	{

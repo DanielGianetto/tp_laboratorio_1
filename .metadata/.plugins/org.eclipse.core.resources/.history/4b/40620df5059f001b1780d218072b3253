@@ -8,6 +8,8 @@
 #ifndef UTN_OPE_H_
 #define UTN_OPE_H_
 
+#include <stdio.h>
+
 /** \brief Suma de dos valores de tipo float.
  *
  *	\param x float valor del primer sumando.
