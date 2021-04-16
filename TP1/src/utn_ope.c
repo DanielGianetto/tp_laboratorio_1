@@ -9,54 +9,89 @@
 
 float utn_suma(float x, float y, float* pResultado)
 {
-	*pResultado = x+y;
+	int retorno;
+	retorno = 1;
 
-	return 0;
+	if(pResultado != NULL)
+	{
+		*pResultado = x+y;
+		retorno = 0;
+	}
+
+	return retorno;
 }
 
 float utn_resta(float x, float y, float* pResultado)
 {
-	*pResultado = x-y;
+	int retorno;
+	retorno = 1;
 
-	return 0;
+	if(pResultado != NULL)
+	{
+		*pResultado = x-y;
+		retorno = 0;
+	}
+
+	return retorno;
 }
 
 float utn_multiplicacion(float x, float y, float* pResultado)
 {
-	*pResultado = x*y;
+	int retorno;
+	retorno = 1;
 
-	return 0;
+	if(pResultado != NULL)
+	{
+		*pResultado = x*y;
+		retorno = 0;
+	}
+
+	return retorno;
 }
 
 float utn_division(float x, float y, float* pResultado)
 {
-	*pResultado = x/y;
+	int retorno;
+	retorno = 1;
 
-	return 0;
+	if(pResultado != NULL && y != 0)
+	{
+		*pResultado = x/y;
+		retorno = 0;
+	}
+
+	return retorno;
 }
 
 long long utn_factorial(float x, float* pResultado)
 {
 	int i;
+	int retorno;
 
-	*pResultado = 1;
+	retorno = -1;
 
-	if(x == 0)
+	if(pResultado != NULL)
 	{
 		*pResultado = 1;
-	}
-	else
-	{
-		for(i = 1; i <= x; i++)
+
+		if(x == 0)
 		{
-			*pResultado = *pResultado * i;
+			*pResultado = 1;
 		}
+		else
+		{
+			for(i = 1; i <= x; i++)
+			{
+				*pResultado = *pResultado * i;
+			}
+		}
+		retorno = 0;
 	}
 
-	return 0;
+	return retorno;
 }
 
-void utn_resolverMostrarTodo(float x, float y, int mostrarResultados, int flagA, int flagB)
+void utn_resolverMostrarTodo(float x, float y, int mostrarResultados)
 {
 	float sumar;
 	float restar;

@@ -10,13 +10,55 @@
 
 #include <stdio.h>
 
+/** \brief Suma de dos valores de tipo float.
+ *
+ *	\param x float valor del primer sumando.
+ *	\param y float valor del segundo sumando.
+ *	\return retorno int 0 si no hay error, -1 si se produce un error.
+ *
+ */
 float utn_suma(float x, float y, float* pResultado);
+/**	\brief Resta de dos valores de tipo float.
+ *
+ *	\param x float valor del primer minuendo.
+ *	\param y float valor del segundo sustraendo.
+ *	\return retorno int 0 si no hay error, -1 si se produce un error.
+ *
+ */
 float utn_resta(float x, float y, float* pResultado);
+/**	\brief Multiplica x por y
+ *
+ *	\param x float valor del primer sumando.
+ *	\param y float valor del segundo sumando.
+ *	\return retorno int 0 si no hay error, -1 si se produce un error.
+ *
+ */
 float utn_multiplicacion(float x, float y, float* pResultado);
+/** \brief Divide x por y.
+ *
+ *	\param x float valor del primer dividendo.
+ *	\param y float valor del segundo divisor.
+ *	\return retorno int 0 si no hay error, -1 si se produce un error.
+ *
+ */
 float utn_division(float x, float y, float* pResultado);
+/** \brief Resuleve el factorial del numero ingresado.
+ *
+ *	\param x float valor al que se le calcula su factorial.
+ *	\return retorno int  0 si no hay error, -1 si se produce un error.
+ *
+ *
+ */
 long long utn_factorial(float x, float* pResultado);
-
-void utn_resolverMostrarTodo(float x, float y, int mostrarResultados, int flagA, int flagB);
+/** \brief Resuelve todas las operaciones y muestra sus resultador.
+ *
+ *	\param x float primer operando a ingresar.
+ *	\param y float segundo operando a ingresar.
+ *	\param mostrarResultados int según su valor (0 o 1) muestra por pantalla el resultado de las operaciones.
+ *	\return retorno int 0 si no hay error, -1 si se produce un error.
+ *
+ */
+void utn_resolverMostrarTodo(float x, float y, int mostrarResultados);
 
 
 

@@ -9,7 +9,7 @@
         numB
         opcion
 *
-*   Version: 0.5 del 28 de Marzo del 2021.
+*   Version: 1.0 del 16 de Abril del 2021.
 *   Autor: Daniel Gianetto
 *****************************************************************/
 #include <stdio.h>
@@ -37,15 +37,15 @@ int main(void)
 		switch(opcion)
 		{
 			case 1:
-				numA = utn_getFloat(&numA, "\nIngrese el 1er operando: ");
+				utn_getFloat(&numA, "\nIngrese el 1er operando: ");
 				changeA = 1;
 				break;
 			case 2:
-				numB = utn_getFloat(&numB, "\nIngrese el 2do operando: ");
+				utn_getFloat(&numB, "\nIngrese el 2do operando: ");
 				changeB = 1;
 				break;
 			case 3:
-				utn_resolverMostrarTodo(numA,numB,mostrar,changeA,changeB);
+				utn_resolverMostrarTodo(numA,numB,mostrar);
 				mostrar = 1;
 				break;
 			case 4:
@@ -55,7 +55,7 @@ int main(void)
 				}
 				else
 				{
-					utn_resolverMostrarTodo(numA,numB,mostrar,changeA,changeB);
+					utn_resolverMostrarTodo(numA,numB,mostrar);
 					mostrar = 0;
 					changeA = 0;
 					changeB = 0;

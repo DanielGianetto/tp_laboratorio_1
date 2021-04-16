@@ -12,9 +12,39 @@
 #include <stdio_ext.h>
 #include <stdlib.h>
 
+/** \brief Permite el ingreso de un dato de tipo float.
+ *
+ *	\param pNumero float puntero del dato de tipo float a ingresar.
+ *	\param pTexto char puntero del mensaje que se muestra a la hora de pedir al usuario que ingrese un valor.
+ *	\return retorno int 0 en caso de haber validado todo bien, retorno = -1 en caso de error.
+ *
+ */
 float utn_getFloat(float* pNumero, char* pTexto);
+/** \brief Permite el ingreso de un dato de tipo int dentro de un rango de valores asignado.
+ *
+ * 	\param pNum int puntero del dato de tipo int a ingresar.
+ * 	\param pTexto char puntero del mensaje que se muestra a la hora de pedir al usuario que ingrese un valor.
+ * 	\param pErro char puntero del mensaje que se muestra en caso de error.
+ * 	\param minimo int valor del rango a validar.
+ * 	\param maximo int valor del rango a validar.
+ * 	\return retorno int 0 si no se produce ningún error, retorno = -1 en caso de error.
+ *
+ */
 int utn_getInt(int* pNum, char* pTexto, char* pError, int minimo, int maximo);
-int utn_menu(int* pVariableOpcion, float NumA, float NumB, int changeA, int changeB, int minimo, int maximo);
+/** \brief Muestra un menu y se solicita que el usuario seleccione una de las opciones junto con
+ * 		   la carga de datos según la opción seleccionada.
+ *
+ * 	\param pVariableOpcion int puntero de la variable que define la opción seleccionada.
+ * 	\param numA float operando que se mostrara en la opción uno reemplazando a 'x'.
+ *	\param numB float operando que se mostrara en la opción dos reemplazando a 'y'.
+ *	\param changA int según su valor (0 o 1) se cambiara x por numA.
+ *	\param changB int según su valor (0 o 1) se cambiara y por numB.
+ *	\param minimo int valor del rango a validar.
+ *	\param maximo int valor del rango a validar.
+ *	\return retorno int sera 0 si no hay error, -1 en caso de haber error.
+ *
+ */
+int utn_menu(int* pVariableOpcion, float numA, float numB, int changeA, int changeB, int minimo, int maximo);
 
 
 
