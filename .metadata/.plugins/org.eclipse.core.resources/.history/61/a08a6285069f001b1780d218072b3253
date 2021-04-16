@@ -9,7 +9,7 @@
         numB
         opcion
 *
-*   Version: 1.1 del 16 de Abril del 2021.
+*   Version: 1.0 del 16 de Abril del 2021.
 *   Autor: Daniel Gianetto
 *****************************************************************/
 #include <stdio.h>
